@@ -28,7 +28,31 @@ public class UIImage : MonoBehaviour
         if( Input.GetKeyDown(KeyCode.Z) )
         {
             sprite = hikari;
-            // image = this.GetComponent<Image>();
+            image.sprite = sprite;
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            sprite = haru;
+            image.sprite = sprite;
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            sprite = meari;
+            image.sprite = sprite;
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            sprite = mizuki;
+            image.sprite = sprite;
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            sprite = sora;
+            image.sprite = sprite;
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            sprite = daiti;
             image.sprite = sprite;
         }
     }
