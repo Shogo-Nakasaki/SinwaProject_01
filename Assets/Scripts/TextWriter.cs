@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class TextWriter : MonoBehaviour
 {
-
     public UIText uitext;
     public UIImage uiimage;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("Cotest");
-
     }
     
     IEnumerator Skip()
@@ -26,13 +24,9 @@ public class TextWriter : MonoBehaviour
         /*
         uitext.DrawText("あー、あー、テステス");
         uiimage.DrawPic(1,1,0);
-        while (uitext.playing) yield return 0;
-        while (!uitext.IsClicked()) yield return 0;
 
         uitext.DrawTest("テスター", "会話文のテストです。\nついでに改行のチェックもする");
         uiimage.DrawPic(2,3,0);
-        while (uitext.playing) yield return 0;
-        while (!uitext.IsClicked()) yield return 0;
         */
         
         // 現段階までもらっているシナリオ挿入
