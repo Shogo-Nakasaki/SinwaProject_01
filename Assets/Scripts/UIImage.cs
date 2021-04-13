@@ -17,18 +17,21 @@ public class UIImage : MonoBehaviour
     public Sprite meari;
     public Sprite mizuki;
     public Sprite sora;
+    
+    // 表情差分
 
     private Sprite sprite;
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 動作チェック：Zキーを入力するとダイチからハルに画像が変わるか
+        
+        /* 
         if( Input.GetKeyDown(KeyCode.Z) )
         {
             sprite = hikari;
@@ -59,5 +62,23 @@ public class UIImage : MonoBehaviour
             sprite = daiti;
             image_C.sprite = sprite;
         }
+        */
+        
+    }
+    
+    public void DrawPic ( int place, int chara, int face )
+    {
+        // キャラクターの選択
+        sprite = (chara == 1) ? sprite = hikari :
+                 (chara == 2) ? sprite = haru   :
+                 (chara == 3) ? sprite = meari  :
+                 (chara == 4) ? sprite = mizuki :
+                 (chara == 5) ? sprite = sora   :
+                                sprite = daiti  ;
+                
+        // 画像の挿入場所
+        image_C.sprite = (place == 0) ? sprite : daiti;
+        image_L.sprite = (place == 1) ? sprite : daiti;
+        image_R.sprite = (place == 2) ? sprite : daiti;
     }
 }
