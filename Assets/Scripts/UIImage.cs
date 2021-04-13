@@ -29,43 +29,10 @@ public class UIImage : MonoBehaviour
 
     void Update()
     {
-        // 動作チェック：Zキーを入力するとダイチからハルに画像が変わるか
-        
-        /* 
-        if( Input.GetKeyDown(KeyCode.Z) )
-        {
-            sprite = hikari;
-            image_C.sprite = sprite;
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            sprite = haru;
-            image_C.sprite = sprite;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            sprite = meari;
-            image_C.sprite = sprite;
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            sprite = mizuki;
-            image_C.sprite = sprite;
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            sprite = sora;
-            image_C.sprite = sprite;
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            sprite = daiti;
-            image_C.sprite = sprite;
-        }
-        */
-        
     }
     
+    // DrawPic(場所、キャラクター、表情差分)でイラストを表示
+    // 表示しない時用の無印枠が必要。
     public void DrawPic ( int place, int chara, int face )
     {
         // キャラクターの選択
@@ -77,8 +44,11 @@ public class UIImage : MonoBehaviour
                                 sprite = daiti  ;
                 
         // 画像の挿入場所
-        image_C.sprite = (place == 0) ? sprite : daiti;
-        image_L.sprite = (place == 1) ? sprite : daiti;
-        image_R.sprite = (place == 2) ? sprite : daiti;
+        switch (place)
+        {
+            case 1:  image_L.sprite = sprite; break;
+            case 2:  image_R.sprite = sprite; break;
+            default: image_C.sprite = sprite; break;
+        }
     }
 }
