@@ -34,7 +34,7 @@ public class UIText : MonoBehaviour
         StartCoroutine("CoDrawText", text);
     }
     // 関数：通常会話用のテキスト生成
-    public void DrawTest ( string name, string text)
+    public void DrawText ( string name, string text)
     {
         nameText.text = name + "\n「";
         StartCoroutine("CoDrawText", text + "」");

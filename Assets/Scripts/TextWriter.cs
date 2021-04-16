@@ -21,14 +21,6 @@ public class TextWriter : MonoBehaviour
     // 文章を表示させるコルーチン(説明雑)
     IEnumerator Cotest()
     {
-        /*
-        uitext.DrawText("あー、あー、テステス");
-        uiimage.DrawPic(1,1,0);
-
-        uitext.DrawTest("テスター", "会話文のテストです。\nついでに改行のチェックもする");
-        uiimage.DrawPic(2,3,0);
-        */
-        
         // 現段階までもらっているシナリオ挿入
         uitext.DrawText("今僕たちが生きているこの国は、\n世界有数の先進国であったと聞く。");
         yield return StartCoroutine("Skip");
